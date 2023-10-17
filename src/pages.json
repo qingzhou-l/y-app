@@ -1,14 +1,16 @@
 {
   "pages": [
-    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
     {
-      "path": "pages/index/index"
+      "path": "pages/vip/index"
     },
     {
       "path": "pages/classify/index"
     },
     {
-      "path": "pages/vip/index"
+      "path": "pages/my/index",
+      "style": {
+        "navigationBarTitleText": ""
+      }
     },
     {
       "path": "pages/card/index",
@@ -17,7 +19,7 @@
       }
     },
     {
-      "path": "pages/my/index"
+      "path": "pages/index/index"
     }
   ],
   "easycom": {
@@ -27,8 +29,8 @@
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "易商城",
-    "navigationBarBackgroundColor": "#fff",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarBackgroundColor": "#F4F4F4",
+    "backgroundColor": "#F4F4F4"
   },
   "tabBar": {
     "color": "",

@@ -7,8 +7,6 @@
     <u-swiper
         height="200"
         :list="list1"
-        @change="change"
-        @click="click"
     ></u-swiper>
 
     <NavMenu/>
@@ -25,9 +23,11 @@
     </y-activity-card>
     <y-activity-card title="特惠拼团"></y-activity-card>
 
-
+    <y-banner/>
 
     <u-tabs  :list="tabs"></u-tabs>
+
+    <y-recommend/>
   </view>
 </template>
 

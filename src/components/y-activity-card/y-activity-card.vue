@@ -1,5 +1,5 @@
 <template>
-  <view class="y-activity-card">
+  <y-card class="y-activity-card">
     <view class="y-activity-card-header">
       <view class="y-activity-card-theme">
         <span class="y-activity-card-title">{{title}}</span>
@@ -14,7 +14,7 @@
     <view class="y-activity-card-body">
       <slot/>
     </view>
-  </view>
+  </y-card>
 </template>
 
 <script>
@@ -38,9 +38,6 @@ export default {
 
 <style lang="scss">
 .y-activity-card {
-  margin: 12px;
-  padding: 12px;
-  border-radius: $y-radius;
 
   &-title{
     font-size: 14px;

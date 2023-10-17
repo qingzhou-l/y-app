@@ -2,7 +2,7 @@
   <view class="search-bar">
     <u-row gutter="10">
       <u-col span="10">
-        <u-search :show-action="false" placeholder="日照香炉生紫烟" v-model="searchKey"></u-search>
+        <u-search bg-color="#fff" :show-action="false" placeholder="日照香炉生紫烟" v-model="searchKey"></u-search>
       </u-col>
       <u-col span="1">
         <u-icon name="chat" size="24"/>
@@ -28,6 +28,6 @@ export default {
 <style lang="scss">
 .search-bar{
   padding: 12px 10px;
-  background: #fff;
+  background: #f4f4f4;
 }
 </style>
