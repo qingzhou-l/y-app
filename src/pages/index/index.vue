@@ -1,49 +1,65 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view>
-			<text class="title">{{title}}</text>
-		</view>
-	</view>
+  <view class="content">
+    <u-sticky>
+      <SearchBar/>
+    </u-sticky>
+
+    <u-swiper
+        height="200"
+        :list="list1"
+        @change="change"
+        @click="click"
+    ></u-swiper>
+
+    <NavMenu/>
+
+    <y-activity-card title="今日好券" sub="领券">
+      <y-coupon-card></y-coupon-card>
+      <y-coupon-card></y-coupon-card>
+      <y-coupon-card></y-coupon-card>
+    </y-activity-card>
+    <y-activity-card title="秒杀时刻">
+      <template #title-sub>
+        <u-count-down :time="30 * 60 * 60 * 1000" format="HH:mm:ss"></u-count-down>
+      </template>
+    </y-activity-card>
+    <y-activity-card title="特惠拼团"></y-activity-card>
+
+
+
+    <u-tabs  :list="tabs"></u-tabs>
+  </view>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
+import SearchBar from "@/pages/index/component/SearchBar.vue";
+import NavMenu from "@/pages/index/component/NavMenu.vue";
 
-		},
-		methods: {
-
-		}
-	}
+export default {
+  components: {NavMenu, SearchBar},
+  data() {
+    return {
+      list1: [
+        'https://cdn.uviewui.com/uview/swiper/swiper1.png',
+        'https://cdn.uviewui.com/uview/swiper/swiper2.png',
+        'https://cdn.uviewui.com/uview/swiper/swiper3.png',
+      ],
+      tabs:[
+        {
+          name:'为您推荐'
+        },{
+          name:'为您推荐'
+        },{
+          name:'为您推荐'
+        },{
+          name:'为您推荐'
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
 
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin: 200rpx auto 50rpx auto;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
 </style>

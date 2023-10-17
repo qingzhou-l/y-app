@@ -1,16 +1,56 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
-		}
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index"
+    },
+    {
+      "path": "pages/classify/index"
+    },
+    {
+      "path": "pages/vip/index"
+    },
+    {
+      "path": "pages/card/index",
+      "style": {
+        "navigationBarTitleText": "购物车"
+      }
+    },
+    {
+      "path": "pages/my/index"
+    }
+  ],
+  "easycom": {
+    "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
+    "^y-(.*)": "@/components/y-$1/y-$1.vue"
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "易商城",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "",
+    "selectedColor": "",
+    "backgroundColor": "",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },{
+        "pagePath": "pages/classify/index",
+        "text": "分类"
+      },{
+        "pagePath": "pages/vip/index",
+        "text": "会员"
+      },{
+        "pagePath": "pages/card/index",
+        "text": "购物车"
+      },{
+        "pagePath": "pages/my/index",
+        "text": "我的"
+      }
+    ]
+  }
 }
